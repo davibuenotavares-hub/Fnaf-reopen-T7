@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Horror Night: Independent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-screen">
+        <div id="ui-top">
+            <div id="clock">12 AM</div>
+            <div id="power-display">BATERIA: 100%</div>
+            <div id="temp-display">TEMP: 25°C</div>
+        </div>
+
+        <div id="office">
+            <div id="window" class="aperture window-style" onclick="checkProximity('window')">JANELA</div>
+            
+            <div id="temp-controls">
+                <button id="btn-temp-down">🔽</button>
+                <button id="btn-temp-up">🔼</button>
+            </div>
+
+            <div id="door-right" class="aperture door-style" onclick="checkProximity('door')">PORTA</div>
+            
+            <div id="office-status">SISTEMAS OK</div>
+        </div>
+
+        <div id="camera-monitor">
+            <div id="cam-view">
+                <div id="cam-name">CAM 01</div>
+                <div id="motion-alert">NENHUM MOVIMENTO</div>
+                <button id="btn-recharge">↩️</button>
+                <button id="btn-audio-center">🎶</button>
+            </div>
+            <div id="cam-controls">
+                <div id="cam-buttons">
+                    <button class="cam-btn" data-cam="1">C1</button>
+                    <button class="cam-btn" data-cam="2">C2</button>
+                    <button class="cam-btn" data-cam="3">C3</button>
+                    <button class="cam-btn" data-cam="4">C4</button>
+                    <button class="cam-btn" data-cam="5">C5</button>
+                    <button class="cam-btn" data-cam="6">C6</button>
+                </div>
+                <button id="btn-close-cam">SAIR (X)</button>
+            </div>
+        </div>
+
+        <div id="office-controls">
+            <button id="btn-window-action">FECHAR JANELA</button>
+            <button id="btn-open-monitor">CÂMERAS</button>
+            <button id="btn-door-action">FECHAR PORTA</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
